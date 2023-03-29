@@ -4,7 +4,8 @@ const textArr = [
   "Встрічайся собі....",
   "Купуй собі всяякее",
   "Ти дорослий....",
-  "Станим зробим..."
+  "Станим зробим...",
+  "Ну при чом там пасіба..."
 ];
 
 let imgIndex = 1;
@@ -18,7 +19,7 @@ if (typeof document !== "undefined") {
     const title = document.getElementById("title");
     title.innerText = textArr[titleIndex];
     titleIndex = titleIndex + 1;
-    if (titleIndex > 4) titleIndex = 0;
+    if (titleIndex > 6) titleIndex = 0;
   }, 5000);
 }
 
