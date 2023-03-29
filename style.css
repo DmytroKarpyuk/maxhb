@@ -1,0 +1,147 @@
+html {
+  display: grid;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Rubik Bubbles", cursive;
+  background-image: url(./imgs/1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#title {
+  text-align: center;
+  margin-top: 1em;
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: white;
+  transition: 0.5s;
+}
+
+#timer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.days,
+.hours,
+.minutes,
+.seconds {
+  display: inline-block;
+  padding: 20px;
+  width: 100px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.days {
+  background: #dc00b7;
+}
+
+.hours {
+  background: #fef05f;
+  color: black;
+  color: dark;
+}
+
+.minutes {
+  background: #0c88eb;
+}
+
+.seconds {
+  background: #00c29a;
+}
+
+.numbers {
+  color: dark;
+  font-size: 3em;
+}
+
+.info {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.audio {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
+@media (min-width: 850px) {
+  body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  #title {
+    font-size: 107px;
+  }
+
+  .audio {
+    margin-top: 100px;
+  }
+
+  .info {
+    font-size: 22px;
+  }
+
+  #timer {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    letter-spacing: 5px;
+    transition: 0.5s;
+  }
+
+  .days,
+  .hours,
+  .minutes,
+  .seconds {
+    display: inline-block;
+    padding: 30px;
+    width: 100px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .numbers {
+    font-size: 4em;
+  }
+}
