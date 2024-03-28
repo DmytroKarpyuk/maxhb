@@ -1,36 +1,5 @@
-const textArr = [
-  "З прошедшим днем народження блять!",
-  "Пока ше оддихай",
-  "Встрічайся собі....",
-  "Купуй собі всяякее",
-  "Ти дорослий....",
-  "Станим зробим...",
-  "Ну при чом там пасіба..."
-];
-
-let imgIndex = 1;
-let titleIndex = 0;
-
 // Set the date we're counting down to
 const countDownDate = new Date("Mar 29, 2024 00:00:00").getTime();
-
-if (typeof document !== "undefined") {
-  setInterval(() => {
-    const title = document.getElementById("title");
-    title.innerText = textArr[titleIndex];
-    titleIndex = titleIndex + 1;
-    if (titleIndex > 6) titleIndex = 0;
-  }, 5000);
-}
-
-if (typeof document !== "undefined") {
-  setInterval(() => {
-    const body = document.body;
-    body.style.backgroundImage = `url(./imgs/${imgIndex}.jpg)`;
-    imgIndex = imgIndex + 1;
-    if (imgIndex > 7) imgIndex = 1;
-  }, 5000);
-}
 
 const timer = setInterval(function () {
   // Get today's date and time
@@ -69,7 +38,9 @@ const timer = setInterval(function () {
 
   // If the count down is finished, write some text
   if (distance < 0) {
+    document.body.style.backgroundImage = "url(./imgs/hb.jpg)";
     clearInterval(timer);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("timer").innerHTML = "<div class='hb'>🎉🥳🥳🍻🥳🍺🍺🍺🍻🥳🍾🎊🎄🥳🍻🥳🥳🍺🍺🍺🍻🍻</div>";
+    document.getElementById("info").innerHTML = "<span>ТРИИИИИДДЦЦЦЯЯЯЯЯЯЯТЬ!!!!!!!!!!!!!!!!!!!!!</span>"
   }
 }, 1000);
